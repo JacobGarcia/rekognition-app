@@ -1,0 +1,182 @@
+@import url(assets/style/global/bootstrap.min.css);
+html {
+  -webkit-tap-highlight-color: transparent !important; }
+
+body {
+  background-image: url("assets/images/bg.png");
+  background-color: #F4F4F4;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-blend-mode: multiply;
+  color: #212121;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  min-height: 100vh; }
+
+a {
+  color: #4F1EFF; }
+  a:hover {
+    color: #4F1EFF;
+    opacity: .7; }
+
+h2, h3, h4, h5, h6 {
+  font-weight: 500; }
+
+.page__width {
+  margin: 0 auto;
+  max-width: 940px; }
+
+.section__module {
+  background: #fff;
+  padding: 20px; }
+
+.section__module--nopadding {
+  padding: 0; }
+
+.element--center {
+  text-align: center; }
+
+.element--right {
+  text-align: right; }
+
+.element--left {
+  text-align: left; }
+
+.head--nomargin {
+  margin: 0; }
+
+.cta {
+  border: 0px;
+  display: inline-block;
+  line-height: 16px;
+  min-width: 210px;
+  padding: 15px 5px;
+  text-align: center; }
+  .cta:hover {
+    cursor: pointer; }
+
+.cta--primary {
+  background-color: #4F1EFF;
+  color: #fff; }
+  .cta--primary:hover {
+    background: #212121; }
+
+.cta--secondary {
+  background-color: #F4F4F4;
+  color: #212121; }
+  .cta--secondary:hover {
+    background: #212121;
+    color: #fff; }
+
+.cta--full {
+  width: 100%; }
+
+.form__label {
+  font-size: 12px;
+  display: block;
+  width: 100%; }
+
+.form__input {
+  background: none;
+  border: 0px;
+  border-bottom: solid 2px #F4F4F4;
+  color: #4F1EFF;
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  outline: none;
+  padding: 10px 0;
+  width: 100%; }
+  .form__input::-webkit-input-placeholder {
+    color: #DDDDDD;
+    font-weight: 500; }
+  .form__input:focus::-webkit-input-placeholder {
+    color: transparent; }
+
+.form__select {
+  background: none;
+  border: 0px;
+  color: #212121;
+  display: block;
+  font-size: 14px;
+  outline: none;
+  height: 35px;
+  width: 100%; }
+
+.select--border::after {
+  content: ' ';
+  display: block;
+  border-bottom: solid 2px #F4F4F4;
+  width: 100%; }
+
+.form__checkbox {
+  border-bottom: solid 2px #F4F4F4;
+  font-size: 14px;
+  padding: 10px 0;
+  width: 100%; }
+
+.form__input-line {
+  display: block;
+  padding-bottom: 30px; }
+
+.form__error {
+  border: solid 1px #f53d51;
+  color: #f53d51;
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 15px 0;
+  padding: 10px 5px;
+  text-align: center;
+  width: 100%; }
+
+header {
+  height: 100px; }
+
+.header__title {
+  font-size: 26px;
+  font-weight: 500;
+  margin-top: 35px; }
+
+.header--bold {
+  color: #4F1EFF;
+  font-weight: 700; }
+
+.menu {
+  margin: 45px 0 0 0;
+  padding: 0;
+  text-align: right; }
+
+.menu__element {
+  display: inline-block;
+  padding: 0 0 0 15px;
+  list-style: none; }
+
+.menu__anchor {
+  color: #212121;
+  padding: 10px; }
+  .menu__anchor:hover {
+    color: #4F1EFF;
+    opacity: 1; }
+
+.login-box {
+  margin: 0 auto;
+  padding-top: 50px;
+  max-width: 300px; }
+
+.registrador__bottom {
+  padding-top: 40px; }
+
+.webcam__box {
+  margin: 0 auto;
+  width: 290px; }
+
+.webcam__live {
+  background: url("/assets/images/bg-webcam.png") center center no-repeat transparent;
+  border: dashed 5px #F4F4F4;
+  height: 300px;
+  margin-bottom: 20px; }
+
+/*# sourceMappingURL=style.css.map */

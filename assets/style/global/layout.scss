@@ -1,0 +1,44 @@
+html {
+	-webkit-tap-highlight-color: transparent !important;
+}
+
+body {
+	background-image: url('assets/images/bg.png');
+	background-color: $base-color;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-blend-mode: multiply;
+	color: $body-color;
+	font-family: $font-primary;
+	font-size: $font-size;
+	font-weight: 500;
+	min-height: 100vh;
+}
+
+a {
+	color: $primary-color;
+
+	&:hover {
+		color: $primary-color;
+		opacity: .7;
+	}
+}
+
+h2,h3,h4,h5,h6 {
+	font-weight: 500;
+}
+
+.page__width {
+	margin: 0 auto;
+	max-width: 940px;
+}
+
+.section__module {
+	background: #fff;
+	padding: 20px;
+}
+
+.section__module--nopadding {
+	padding: 0;
+}

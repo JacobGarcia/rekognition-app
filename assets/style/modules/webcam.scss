@@ -1,0 +1,11 @@
+.webcam__box {
+	margin: 0 auto;
+	width: 290px;
+}
+
+.webcam__live {
+	background: url('/assets/images/bg-webcam.png') center center no-repeat transparent;
+	border: dashed 5px $base-color;
+	height: 300px;
+	margin-bottom: 20px;
+}
