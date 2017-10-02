@@ -31,7 +31,6 @@ $(function() {
 	// Registro de usuario con validaciones de campos
 	$('#send-register').click(function() {
 		var v_data = 0;
-
 		$('#error-message').html('');
 
 		if ($('#nombre').val() != '') {
@@ -39,7 +38,7 @@ $(function() {
 		} else {
 			$('#error-message').prepend('<span class="form__error">Necesitas ingresar un Nombre.</span>');
 		}
-
+    
 		if ($('#sitio').val() != 'blank') {
 			v_data++;
 		} else {
@@ -83,7 +82,57 @@ $(function() {
 						console.log('Error: ' + registerUser.response);
 						$('#error-message').html('');
 						$('#error-message').fadeIn();
-						$('#error-message').html(registerUser.response);
+						$('#error-message').html('<span class="form__error">' + registerUser.response + '</span>');
+					}
+				} 
+			});
+		} else {
+			$('#error-message').fadeIn();
+		}
+
+	});
+  
+	// Buscamos al visitante
+	$('#search-visitor').click(function() {
+		var v_data = 0;
+
+		$('#error-message').html('');
+
+		if ($('#pin').val() != '') {
+			v_data++;
+		} else {
+			$('#error-message').prepend('<span class="form__error">Necesitas ingresar el PIN del visitante.</span>');
+		}
+		
+		if ($('#foto').val() != '' ) {
+			v_data++;
+		} else {
+			$('#error-message').prepend('<span class="form__error">Necesitas capturar una Fotografía.</span>');
+		}
+
+		if (v_data == 2) {
+			$.ajax({
+				url: 'https://iceberg9.com/playground/face-recognition/modules/search_visitor.php',
+				type: 'POST',
+				data: {
+					pin: $('#pin').val(),
+					foto: $('#foto').val()
+				},
+				beforeSend: function () {
+					$(this).html('Procesando, espere por favor...');
+					$(this).attr('disabled', 'disabled');
+				},
+				success: function (response) {
+					//console.log(response);
+					console.log(searchUser);
+					if (searchUser.response) {
+						$('#modal-policia').fadeIn();
+						$('#modal-policia .modal__title').html('Visitante verificado');
+						$('#modal-policia .registrador__pin').html('Permitir Acceso');
+					} else {
+						$('#error-message').html('');
+						$('#error-message').fadeIn();
+						$('#error-message').html('<span class="form__error">' + searchUser.message + '</span>');
 					}
 				} 
 			});
@@ -93,6 +142,8 @@ $(function() {
 
 	});
 
+
+	// Cerrar modales | Universal
 	$('.modal__close').click(function() {
 		var chooseModal = $(this).attr('data-modal');
 		$('#' + chooseModal).hide();
