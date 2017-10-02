@@ -83,7 +83,7 @@ $(function() {
 						console.log('Error: ' + registerUser.response);
 						$('#error-message').html('');
 						$('#error-message').fadeIn();
-						$('#error-message').html(registerUser.response);
+						$('#error-message').html('<span class="form__error">' + registerUser.response + '</span>');
 					}
 				} 
 			});
@@ -112,12 +112,12 @@ $(function() {
 			$('#error-message').prepend('<span class="form__error">Necesitas capturar una Fotografía.</span>');
 		}
 
-		if (v_data == 4) {
+		if (v_data == 2) {
 			$.ajax({
 				url: 'https://iceberg9.com/playground/face-recognition/modules/search_visitor.php',
 				type: 'POST',
 				data: {
-					nombre: $('#pin').val(),
+					pin: $('#pin').val(),
 					foto: $('#foto').val()
 				},
 				beforeSend: function () {
@@ -125,17 +125,16 @@ $(function() {
 					$(this).attr('disabled', 'disabled');
 				},
 				success: function (response) {
-					console.log(response);
-					//console.log(loginUser.login);
-					if (registerUser.response) {
-						//console.log('Registro exitoso: ' + registerUser.pin);
-						$('#modal-registrador').fadeIn();
-						$('#modal-registrador .registrador__pin').html('PIN: ' + registerUser.pin + '')
+					//console.log(response);
+					console.log(searchUser);
+					if (searchUser.response) {
+						$('#modal-policia').fadeIn();
+						$('#modal-policia .modal__title').html('Visitante verificado');
+						$('#modal-policia .registrador__pin').html('Permitir Acceso');
 					} else {
-						console.log('Error: ' + registerUser.response);
 						$('#error-message').html('');
 						$('#error-message').fadeIn();
-						$('#error-message').html(registerUser.response);
+						$('#error-message').html('<span class="form__error">' + searchUser.message + '</span>');
 					}
 				} 
 			});
