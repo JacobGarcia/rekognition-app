@@ -27,6 +27,11 @@
 	&:hover {
 		cursor: pointer;
 	}
+
+	&:disabled {
+		cursor: not-allowed;
+		opacity: .3;
+	}
 }
 
 .cta--primary {
@@ -35,6 +40,7 @@
 
 	&:hover {
 		background: $body-color;
+		color: #fff;
 	}
 }
 
@@ -58,6 +64,10 @@
 	font-size: 12px;
 	display: block;
 	width: 100%;
+}
+
+.form__label--noinput {
+	margin-bottom: 10px;
 }
 
 .form__input {
@@ -122,8 +132,59 @@
 	display: block;
 	font-size: 12px;
 	font-weight: 600;
-	margin: 15px 0;
+	margin: 15px 0 0 0;
 	padding: 10px 5px;
 	text-align: center;
 	width: 100%;
+}
+
+.form_error--item {
+	display: block;
+}
+
+.modal__wrapper {
+	background: $overlar-color;
+	height: 100%;
+	top: 0;
+	position: fixed;
+	width: 100%;
+}
+
+.modal__box {
+	background: #fff;
+	left: 50%;
+	padding: 20px;
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-o-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+	width: 480px;
+}
+
+.modal__head {
+	padding:  0 0 10px 0;
+}
+
+.modal__close {
+	color: $primary-color;
+	font-size: 14px;
+	
+	&:hover {
+		cursor: pointer;
+		opacity: .8;
+	}
+}
+
+.modal__body {
+	padding: 0 0 20px 0;
+}
+
+.modal__title {
+	margin-top: 0;
+}
+
+.modal__footer {
+	padding: 0 0 20px 0;
 }

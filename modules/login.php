@@ -1,6 +1,5 @@
 <?php 
 	require 'functions.php';
-	
 	header('Content-type: application/javascript');
 
 	$login_user = $_POST['usuario'];
@@ -11,6 +10,7 @@
 	if (isset($authenticatelUser['user']['role'])):
 		session_start();
 		$_SESSION['rol'] = $authenticatelUser['user']['role'];
+		$_SESSION['token'] = $authenticatelUser['token'];
 	endif;
 
 	if (isset($authenticatelUser['user']['role']) && $authenticatelUser['user']['role'] == 'registrador'):

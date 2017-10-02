@@ -28,16 +28,31 @@
 			</div>
 
 			<div class="form__input-line">
-				<label for="nombre" class="form__label">Aviso de Privacidad</label>
+				<label for="privacidad" class="form__label">Aviso de Privacidad</label>
 					<div class="form__checkbox">
-						<input type="checkbox"> <span>¿Usuario acepta aviso de privacidad?</span>
+						<input type="checkbox" id="privacidad" name="privacidad" value="true"> <span>¿Usuario acepta aviso de privacidad?</span>
 					</div>
 			</div>
+
+			<div class="form__input-line">
+				<label for="foto" class="form__label form__label--noinput">Fotografía Capturada</label>
+				<div class="webcam__live">
+					<div id="image-output" class="webcam__render"></div>
+				</div>
+			</div>
+
+			<div class="form__input-line" style="display: none;">
+				<label for="foto" class="form__label">URL Photo</label>
+				<input type="text" id="foto" class="form__input" name="foto" placeholder="URL en captura...">
+			</div>
+
 		</div>
 		<div class="col-xs-12 col-md-6">
 			<div class="webcam__box">
-				<div id="my_camera" class="webcam__live"></div>
-				<span class="cta cta--secondary cta--full">Capturar Fotografía</span>
+				<div class="webcam__live">
+					<div id="my_camera" class="webcam__render"></div>
+				</div>
+				<span id="take-snap" class="cta cta--secondary cta--full">Capturar Fotografía</span>
 			</div>
 		</div>
 	</div>
@@ -47,8 +62,8 @@
 			
 			<div class="registrador__bottom">
 				<div class="form__input-line">
-					<button id="send-login" class="cta cta--primary cta--full">Enviar registro</button>
-					<span id="login-message" class="form__error" style="display: none;"></span>
+					<button id="send-register" class="cta cta--primary cta--full">Enviar registro</button>
+					<div id="error-message" style="display: none;"></div>
 				</div>
 			</div>
 
