@@ -31,7 +31,6 @@ $(function() {
 	// Registro de usuario con validaciones de campos
 	$('#send-register').click(function() {
 		var v_data = 0;
-
 		$('#error-message').html('');
 
 		if ($('#nombre').val() != '') {
@@ -39,7 +38,7 @@ $(function() {
 		} else {
 			$('#error-message').prepend('<span class="form__error">Necesitas ingresar un Nombre.</span>');
 		}
-
+    
 		if ($('#sitio').val() != 'blank') {
 			v_data++;
 		} else {
@@ -92,8 +91,7 @@ $(function() {
 		}
 
 	});
-
-
+  
 	// Buscamos al visitante
 	$('#search-visitor').click(function() {
 		var v_data = 0;

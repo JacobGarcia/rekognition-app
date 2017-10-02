@@ -85,7 +85,4 @@ function searchUser($pin, $photo, $token) {
 
 	return $response;
 }
-
-
-
 ?>
