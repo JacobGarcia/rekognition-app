@@ -19,10 +19,7 @@
 			<div class="form__input-line">
 				<label for="sitio" class="form__label">Sitio</label>
 					<select id="sitio" class="form__select" name="sitio">
-						<option value="blank">-- Selecciona un sitio</option>
-						<option value="lobby">lobby</option>
-						<option value="salón conferencia 1">Salón conferencia 1</option>
-						<option value="salón conferencia 2">Salón conferencia 2</option>
+						<option value="lobby">Lobby</option>
 					</select>
 					<div class="select--border"></div>
 			</div>

@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	require 'modules/config.php';
 ?>
 
@@ -31,7 +32,7 @@
 
 						<div class="form__input-line">
 							<button id="send-login" class="cta cta--primary cta--full">Iniciar sesión</button>
-							<span id="login-message" class="form__error" style="display: none;"></span>
+							<div id="error-message" style="display: none;"></div>
 						</div>
 
 					<!-- </form> -->

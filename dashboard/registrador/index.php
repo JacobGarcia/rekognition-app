@@ -1,8 +1,6 @@
 <?php 
-	require '../../modules/config.php';
-
 	session_start();
-	$rol = $_SESSION['rol'];
+	require '../../modules/config.php';
 
 	if (isset($rol) && $rol == 'registrador'):
 		include '../../header.php';

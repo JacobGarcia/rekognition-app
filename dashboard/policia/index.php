@@ -1,10 +1,11 @@
 <?php 
 	session_start();
-
-	$rol = $_SESSION['rol'];
+	require '../../modules/config.php';
 
 	if (isset($rol) && $rol == 'policia'):
-		echo 'Hola Policia';
+		include '../../header.php';
+		include '../../includes/policia_body_registro.php';
+		include '../../footer.php';
 	else:
 		header('Location: /../../index.php'); 
 	endif;

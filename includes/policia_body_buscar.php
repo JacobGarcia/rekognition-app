@@ -4,7 +4,7 @@
 	<div class="row">
 
 		<div class="col-xs-12">
-			<h2 class="head--nomargin element--left">Registro de visitante</h2>
+			<h2 class="head--nomargin element--left">Buscar Visitante</h2>
 			<hr>
 		</div>
 	</div>
@@ -12,26 +12,8 @@
 	<div class="row">
 		<div class="col-xs-12 col-md-6">
 			<div class="form__input-line">
-				<label for="nombre" class="form__label">Nombre Completo</label>
-				<input type="text" id="nombre" class="form__input" name="nombre" placeholder="Captura el nombre completo del visitante">
-			</div>
-
-			<div class="form__input-line">
-				<label for="sitio" class="form__label">Sitio</label>
-					<select id="sitio" class="form__select" name="sitio">
-						<option value="blank">-- Selecciona un sitio</option>
-						<option value="lobby">lobby</option>
-						<option value="salón conferencia 1">Salón conferencia 1</option>
-						<option value="salón conferencia 2">Salón conferencia 2</option>
-					</select>
-					<div class="select--border"></div>
-			</div>
-
-			<div class="form__input-line">
-				<label for="privacidad" class="form__label">Aviso de Privacidad</label>
-					<div class="form__checkbox">
-						<input type="checkbox" id="privacidad" name="privacidad" value="true"> <span>¿Usuario acepta aviso de privacidad?</span>
-					</div>
+				<label for="pin" class="form__label">PIN</label>
+				<input type="text" id="pin" class="form__input" name="pin" placeholder="Captura PIN del visitante">
 			</div>
 
 			<div class="form__input-line">
@@ -45,7 +27,6 @@
 				<label for="foto" class="form__label">URL Photo</label>
 				<input type="text" id="foto" class="form__input" name="foto" placeholder="URL en captura...">
 			</div>
-
 		</div>
 		<div class="col-xs-12 col-md-6">
 			<div class="webcam__box">
@@ -62,7 +43,7 @@
 			
 			<div class="registrador__bottom">
 				<div class="form__input-line">
-					<button id="send-register" class="cta cta--primary cta--full">Enviar registro</button>
+					<button id="search-visitor" class="cta cta--primary cta--full">Buscar visitante</button>
 					<div id="error-message" style="display: none;"></div>
 				</div>
 			</div>
