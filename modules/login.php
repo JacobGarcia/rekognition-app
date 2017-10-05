@@ -1,4 +1,5 @@
 <?php 
+	session_start();
 	require 'functions.php';
 	header('Content-type: application/javascript');
 
@@ -8,7 +9,6 @@
 	$authenticatelUser = loginUser($login_user, $login_pswd);
 
 	if (isset($authenticatelUser['user']['role'])):
-		session_start();
 		$_SESSION['rol'] = $authenticatelUser['user']['role'];
 		$_SESSION['token'] = $authenticatelUser['token'];
 	endif;

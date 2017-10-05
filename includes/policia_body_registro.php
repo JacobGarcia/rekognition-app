@@ -1,6 +1,6 @@
 <div class="container-fluid">
 <section class="section__module">
-	
+
 	<?php
 		$title_section = 'Registro de visitante';
 		include 'inner_header.php';
@@ -15,7 +15,9 @@
 
 			<div class="form__input-line">
 				<label for="sitio" class="form__label">Sitio</label>
-					<?php include 'sites_select.php'; ?>
+					<select id="sitio" class="form__select" name="sitio">
+						<option value="lobby">Lobby</option>
+					</select>
 					<div class="select--border"></div>
 			</div>
 
@@ -55,7 +57,7 @@
 			<div class="registrador__bottom">
 				<div class="form__input-line">
 					<div id="error-message" style="display: none;"></div>
-					<button id="send-register" class="cta cta--primary cta--full" data-modal-related="#modal-registrador">Enviar registro</button>
+					<button id="send-register" class="cta cta--primary cta--full" data-modal-related="#modal-policia-registro">Enviar registro</button>
 				</div>
 			</div>
 

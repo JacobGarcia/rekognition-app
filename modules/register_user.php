@@ -10,7 +10,12 @@
 	$user_token = $_SESSION['token'];
 
 	$responseUser = registerUser($user_name, $user_privacy, $user_photo, $user_site, $user_token);
+	
 
-	echo 'registerUser = {response:'.$responseUser['success'].', pin:"'.$responseUser['user']['pin'].'"};';
+	if (isset($responseUser['user'])):
+		print 'registerUser = {response:'.$responseUser['success'].', pin:"'.$responseUser['user']['pin'].'"};';
+	else:
+		print 'registerUser = {response:'.$responseUser['success'].', message:"'.$responseUser['message'].'"};';
+	endif;
 
 ?>
