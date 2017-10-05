@@ -1,13 +1,10 @@
 <div class="container-fluid">
 <section class="section__module">
 
-	<div class="row">
-
-		<div class="col-xs-12">
-			<h2 class="head--nomargin element--left">Registro de visitante</h2>
-			<hr>
-		</div>
-	</div>
+	<?php
+		$title_section = 'Registro de visitante';
+		include 'inner_header.php';
+	?>
 
 	<div class="row">
 		<div class="col-xs-12 col-md-6">
@@ -59,8 +56,8 @@
 			
 			<div class="registrador__bottom">
 				<div class="form__input-line">
-					<button id="send-register" class="cta cta--primary cta--full">Enviar registro</button>
 					<div id="error-message" style="display: none;"></div>
+					<button id="send-register" class="cta cta--primary cta--full" data-modal-related="#modal-policia-registro">Enviar registro</button>
 				</div>
 			</div>
 

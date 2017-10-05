@@ -1,13 +1,10 @@
 <div class="container-fluid">
 <section class="section__module">
 
-	<div class="row">
-
-		<div class="col-xs-12">
-			<h2 class="head--nomargin element--left">Buscar Visitante</h2>
-			<hr>
-		</div>
-	</div>
+	<?php
+		$title_section = 'Buscar visitante';
+		include 'inner_header.php';
+	?>
 
 	<div class="row">
 		<div class="col-xs-12 col-md-6">
@@ -43,8 +40,8 @@
 			
 			<div class="registrador__bottom">
 				<div class="form__input-line">
-					<button id="search-visitor" class="cta cta--primary cta--full">Buscar visitante</button>
 					<div id="error-message" style="display: none;"></div>
+					<button id="search-visitor" class="cta cta--primary cta--full">Buscar visitante</button>
 				</div>
 			</div>
 
