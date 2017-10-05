@@ -3,12 +3,7 @@ html {
   -webkit-tap-highlight-color: transparent !important; }
 
 body {
-  background-image: url("assets/images/bg.png");
   background-color: #F4F4F4;
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-blend-mode: multiply;
   color: #212121;
   font-family: "Raleway", sans-serif;
   font-size: 16px;
@@ -16,10 +11,9 @@ body {
   min-height: 100vh; }
 
 a {
-  color: #4F1EFF; }
+  color: #720ed7; }
   a:hover {
-    color: #4F1EFF;
-    opacity: .7; }
+    color: #212121; }
 
 h2, h3, h4, h5, h6 {
   font-weight: 500; }
@@ -29,11 +23,21 @@ h2, h3, h4, h5, h6 {
   max-width: 940px; }
 
 .section__module {
-  background: #fff;
+  background-image: url("assets/images/bg_section.png");
+  background-color: #fff;
+  background-position: center bottom;
+  background-repeat: no-repeat;
   padding: 20px; }
 
 .section__module--nopadding {
   padding: 0; }
+
+#particles-js {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2; }
 
 .element--center {
   text-align: center; }
@@ -61,7 +65,7 @@ h2, h3, h4, h5, h6 {
     opacity: .3; }
 
 .cta--primary {
-  background-color: #4F1EFF;
+  background-color: #720ed7;
   color: #fff; }
   .cta--primary:hover {
     background: #212121;
@@ -77,6 +81,12 @@ h2, h3, h4, h5, h6 {
 .cta--full {
   width: 100%; }
 
+.cta--half {
+  width: 49%; }
+
+.cta--margin {
+  margin-right: 1%; }
+
 .form__label {
   font-size: 12px;
   display: block;
@@ -86,10 +96,10 @@ h2, h3, h4, h5, h6 {
   margin-bottom: 10px; }
 
 .form__input {
-  background: none;
+  background: #fff;
   border: 0px;
   border-bottom: solid 2px #F4F4F4;
-  color: #4F1EFF;
+  color: #720ed7;
   display: block;
   font-size: 14px;
   font-weight: 600;
@@ -103,7 +113,7 @@ h2, h3, h4, h5, h6 {
     color: transparent; }
 
 .form__select {
-  background: none;
+  background: #fff;
   border: 0px;
   color: #212121;
   display: block;
@@ -129,12 +139,13 @@ h2, h3, h4, h5, h6 {
   padding-bottom: 30px; }
 
 .form__error {
+  background-color: #fff;
   border: solid 1px #f53d51;
   color: #f53d51;
   display: block;
   font-size: 12px;
   font-weight: 600;
-  margin: 15px 0 0 0;
+  margin: 0 0 15px 0;
   padding: 10px 5px;
   text-align: center;
   width: 100%; }
@@ -165,7 +176,7 @@ h2, h3, h4, h5, h6 {
   padding: 0 0 10px 0; }
 
 .modal__close {
-  color: #4F1EFF;
+  color: #720ed7;
   font-size: 14px; }
   .modal__close:hover {
     cursor: pointer;
@@ -181,19 +192,17 @@ h2, h3, h4, h5, h6 {
   padding: 0 0 20px 0; }
 
 header {
-  height: 100px; }
+  padding: 20px 0; }
 
 .header__title {
+  display: block;
+  color: #777;
   font-size: 26px;
   font-weight: 500;
-  margin-top: 35px; }
-
-.header--bold {
-  color: #4F1EFF;
-  font-weight: 700; }
+  text-align: right; }
 
 .menu {
-  margin: 45px 0 0 0;
+  margin: 9px 0 0 0;
   padding: 0;
   text-align: right; }
 
@@ -206,7 +215,7 @@ header {
   color: #212121;
   padding: 10px; }
   .menu__anchor:hover {
-    color: #4F1EFF;
+    color: #720ed7;
     opacity: 1; }
 
 .login-box {
@@ -219,7 +228,7 @@ header {
 
 .registrador__pin {
   border: dashed 2px #DDDDDD;
-  color: #4F1EFF;
+  color: #720ed7;
   display: inline-block;
   font-size: 22px;
   padding: 20px; }

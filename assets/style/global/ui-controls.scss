@@ -58,6 +58,14 @@
 	width: 100%;
 }
 
+.cta--half {
+	width: 49%;
+}
+
+.cta--margin {
+	margin-right: 1%;
+}
+
 
 // Formulario
 .form__label {
@@ -71,7 +79,7 @@
 }
 
 .form__input {
-	background: none;
+	background: #fff;
 	border: 0px;
 	border-bottom: solid 2px $base-color;
 	color: $primary-color;
@@ -94,7 +102,7 @@
 }
 
 .form__select {
-	background: none;
+	background: #fff;
 	border: 0px;
 	color: $body-color;
 	display: block;
@@ -127,12 +135,13 @@
 
 // Notificaciones
 .form__error {
+	background-color: #fff;
 	border: solid 1px $error;
 	color: $error;
 	display: block;
 	font-size: 12px;
 	font-weight: 600;
-	margin: 15px 0 0 0;
+	margin: 0 0 15px 0;
 	padding: 10px 5px;
 	text-align: center;
 	width: 100%;

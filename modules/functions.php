@@ -30,11 +30,12 @@ function loginUser($user, $pswd) {
 /* Registro de visitante (Regiter user form) =======================================*/
 /* =================================================================================*/
 function registerUser($name, $privacy, $photo, $site, $token) {
+
 	$payload = array(
 		'name' => $name,
 		'privacy' => $privacy,
-		'photo' => $photo,
-		'site' => $site
+		'site' => $site,
+		'photo' => $photo
 	);
 
 	$payload = http_build_query($payload);
@@ -46,8 +47,7 @@ function registerUser($name, $privacy, $photo, $site, $token) {
 	curl_setopt($session, CURLOPT_HEADER, false);
 	curl_setopt($session, CURLOPT_RETURNTRANSFER, true);
 	curl_setopt($session, CURLOPT_POST, true);
-	//curl_setopt($session, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded', 'x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1OWQwODkzM2FiMjM4YTJhYWMzNjkyMmQiLCJpYXQiOjE1MDY4Mzg4NTIsImV4cCI6MTUwNzA1NDg1Mn0.28Ywt_cfO_F7QrVtbKJbD0d-3_SjljonvTTav2XkCzI'));
-	curl_setopt($session, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded', 'x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1OWQwODkzM2FiMjM4YTJhYWMzNjkyMmQiLCJpYXQiOjE1MDY4Mzg4NTIsImV4cCI6MTUwNzA1NDg1Mn0.28Ywt_cfO_F7QrVtbKJbD0d-3_SjljonvTTav2XkCzI'));
+	curl_setopt($session, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded', 'x-access-token: '.$token.''));
 	curl_setopt($session, CURLOPT_POSTFIELDS, $payload);
 
 	$data = curl_exec($session);
@@ -66,16 +66,14 @@ function searchUser($pin, $photo, $token) {
 	);
 
 	$payload = http_build_query($payload);
-	$putUrl = 'http://ec2-13-59-176-172.us-east-2.compute.amazonaws.com/v1/users/update';
+	$putUrl = 'http://ec2-13-59-176-172.us-east-2.compute.amazonaws.com/v1/users/recognize';
 	$session = curl_init();
 	curl_setopt($session, CURLOPT_URL, $putUrl);
 	curl_setopt($session, CURLOPT_CONNECTTIMEOUT, 30);
 	curl_setopt($session, CURLOPT_TIMEOUT, 30);
 	curl_setopt($session, CURLOPT_HEADER, false);
 	curl_setopt($session, CURLOPT_RETURNTRANSFER, true);
-	curl_setopt($session, CURLOPT_CUSTOMREQUEST, 'PUT');
-	//curl_setopt($session, CURLOPT_POST, true);
-	//curl_setopt($session, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded', 'x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1OWQwODkzM2FiMjM4YTJhYWMzNjkyMmQiLCJpYXQiOjE1MDY4Mzg4NTIsImV4cCI6MTUwNzA1NDg1Mn0.28Ywt_cfO_F7QrVtbKJbD0d-3_SjljonvTTav2XkCzI'));
+	curl_setopt($session, CURLOPT_CUSTOMREQUEST, 'POST');
 	curl_setopt($session, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded', 'x-access-token: '.$token.''));
 	curl_setopt($session, CURLOPT_POSTFIELDS, $payload);
 
@@ -85,4 +83,81 @@ function searchUser($pin, $photo, $token) {
 
 	return $response;
 }
+
+/* Buscamos el PIN (Search User) ===================================================*/
+/* =================================================================================*/
+function searchPin($pin, $token) {
+
+	$putUrl = 'http://ec2-13-59-176-172.us-east-2.compute.amazonaws.com/v1/users/search/'.$pin;
+	$session = curl_init();
+	curl_setopt($session, CURLOPT_URL, $putUrl);
+	curl_setopt($session, CURLOPT_CONNECTTIMEOUT, 30);
+	curl_setopt($session, CURLOPT_TIMEOUT, 30);
+	curl_setopt($session, CURLOPT_HEADER, false);
+	curl_setopt($session, CURLOPT_RETURNTRANSFER, true);
+	curl_setopt($session, CURLOPT_CUSTOMREQUEST, 'GET');
+	curl_setopt($session, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded', 'x-access-token: '.$token.''));
+	//curl_setopt($session, CURLOPT_POSTFIELDS, $payload);
+
+	$data = curl_exec($session);
+	curl_close($session);
+	$response = json_decode($data, true);
+
+	return $response;
+}
+
+/* Actualizar registro (Update User Form) ===================================================*/
+/* ==========================================================================================*/
+function updateVisitor($pin, $site, $date, $token) {
+
+	date_default_timezone_set('America/Mexico_City');
+	$time = new DateTime($date);
+	$stamp = date_timestamp_get($time);
+
+	$payload = array(
+		'pin' => $pin,
+		'site' => $site,
+		'timestamp' => $stamp
+	);
+
+	$payload = http_build_query($payload);
+	$putUrl = 'http://ec2-13-59-176-172.us-east-2.compute.amazonaws.com/v1/users/update';
+	$session = curl_init();
+	curl_setopt($session, CURLOPT_URL, $putUrl);
+	curl_setopt($session, CURLOPT_CONNECTTIMEOUT, 30);
+	curl_setopt($session, CURLOPT_TIMEOUT, 30);
+	curl_setopt($session, CURLOPT_HEADER, false);
+	curl_setopt($session, CURLOPT_RETURNTRANSFER, true);
+	curl_setopt($session, CURLOPT_CUSTOMREQUEST, 'PUT');
+	curl_setopt($session, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded', 'x-access-token: '.$token.''));
+	curl_setopt($session, CURLOPT_POSTFIELDS, $payload);
+
+	$data = curl_exec($session);
+	curl_close($session);
+	$response = json_decode($data, true);
+
+	return $response;
+}
+
+/* Obtenemos Lugares (Get sited) ===================================================*/
+/* =================================================================================*/
+function getSites($token) {
+
+	$putUrl = 'http://ec2-13-59-176-172.us-east-2.compute.amazonaws.com/v1/sites/list';
+	$session = curl_init();
+	curl_setopt($session, CURLOPT_URL, $putUrl);
+	curl_setopt($session, CURLOPT_CONNECTTIMEOUT, 30);
+	curl_setopt($session, CURLOPT_TIMEOUT, 30);
+	curl_setopt($session, CURLOPT_HEADER, false);
+	curl_setopt($session, CURLOPT_RETURNTRANSFER, true);
+	curl_setopt($session, CURLOPT_CUSTOMREQUEST, 'GET');
+	curl_setopt($session, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded', 'x-access-token: '.$token.''));
+
+	$data = curl_exec($session);
+	curl_close($session);
+	$response = json_decode($data, true);
+
+	return $response;
+}
+
 ?>

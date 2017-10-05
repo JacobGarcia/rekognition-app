@@ -9,9 +9,13 @@
 
 	$responseSearch = searchUser($user_pin, $user_photo, $user_token);
 
-	if (isset($responseSearch['user'])):
-		echo 'searchUser = {response:true};';
+	print 'searchUser = {response:"'.$responseSearch['facial_validation'].'", message:"'.$responseSearch['message'].'"};';
+
+	/*
+	if ($responseSearch['facial_validation']):
+		print 'searchUser = {response:'.$responseSearch['facial_validation'].'};';
 	else:
-		echo 'searchUser = {response:false, message: "'.$responseSearch['message'].'"};';
+		print 'searchUser = {response:'.$responseSearch['facial_validation'].', message:"'.$responseSearch['message'].'"};';
 	endif;
+	*/
 ?>

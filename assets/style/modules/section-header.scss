@@ -1,20 +1,17 @@
 header {
-	height: 100px;
+	padding: 20px 0;
 }
 
 .header__title {
+	display: block;
+	color: $extra-color;
 	font-size: 26px;
 	font-weight: 500;
-	margin-top: 35px;
-}
-
-.header--bold {
-	color: $primary-color;
-	font-weight: 700;
+	text-align: right;
 }
 
 .menu {
-	margin: 45px 0 0 0;
+	margin: 9px 0 0 0;
 	padding: 0;
 	text-align: right;
 }
