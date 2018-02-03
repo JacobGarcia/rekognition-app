@@ -6,7 +6,8 @@ $(function() {
 	// Función para login -- Hacemos el redirect al dashboard segun el rol de canela
 	$('#send-login').click(function() {
 		$.ajax({
-			url: 'https://iceberg9.com/playground/face-recognition/modules/login.php',
+			//url: 'https://iceberg9.com/playground/face-recognition/modules/login.php',
+			url: 'https://frm.kawlantid.com/modules/login.php',
 			type: 'POST',
 			data: {
 				usuario: $('#usuario').val(),
@@ -62,7 +63,8 @@ $(function() {
 
 		if (v_data == 4) {
 			$.ajax({
-				url: 'https://iceberg9.com/playground/face-recognition/modules/register_user.php',
+				//url: 'https://iceberg9.com/playground/face-recognition/modules/register_user.php',
+				url: 'https://frm.kawlantid.com/modules/register_user.php',
 				type: 'POST',
 				data: {
 					nombre: $('#nombre').val(),
@@ -116,7 +118,8 @@ $(function() {
 
 		if (v_data == 2) {
 			$.ajax({
-				url: 'https://iceberg9.com/playground/face-recognition/modules/search_visitor.php',
+				//url: 'https://iceberg9.com/playground/face-recognition/modules/search_visitor.php',
+				url: 'https://frm.kawlantid.com/modules/search_visitor.php',
 				type: 'POST',
 				data: {
 					pin: $('#pin').val(),
@@ -162,7 +165,8 @@ $(function() {
 
 		if (v_data == 1) {
 			$.ajax({
-				url: 'https://iceberg9.com/playground/face-recognition/modules/search_pin.php',
+				//url: 'https://iceberg9.com/playground/face-recognition/modules/search_pin.php',
+				url: 'https://frm.kawlantid.com/modules/search_pin.php',
 				type: 'POST',
 				data: {
 					pin: $('#pin').val(),
@@ -211,7 +215,8 @@ $(function() {
 
 		if (v_data == 1) {
 			$.ajax({
-				url: 'https://iceberg9.com/playground/face-recognition/modules/update_visitor.php',
+				//url: 'https://iceberg9.com/playground/face-recognition/modules/update_visitor.php',
+				url: 'https://frm.kawlantid.com/modules/update_visitor.php',
 				type: 'POST',
 				data: {
 					pin: $('#pin').val(),
