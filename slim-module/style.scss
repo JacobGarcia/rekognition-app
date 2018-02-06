@@ -1,0 +1,111 @@
+@import 'assets/global/vars.scss';
+//@import 'assets/global/bootstrap.min.css';
+@import 'assets/global/normalize.css';
+
+// CSS - styles
+
+body {
+	background-color: $body-color;
+	color: $base-color;
+	font-size: $font-size;
+	font-family: $font-primary;
+	font-weight: $font-weight-regular;
+}
+
+a {
+	color: $primary-color;
+}
+
+label {
+	color: $secondary-color;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+
+input[type=text],
+select {
+	background-color: transparent;
+	border-radius: 4px;
+	border: solid 1px $secondary-color;
+	box-sizing: border-box;
+	color: $secondary-color;
+	padding: 10px;
+	width: 100%;
+}
+
+select {
+	height: 42px;
+}
+
+.cta {
+	background-color: transparent;;
+	border: solid 1px $primary-color;
+	border-radius: 4px;
+	color: $base-color;
+	font-size: 14px;
+	padding: 10px;
+	text-align: center;
+	text-transform: uppercase;
+	min-width: 120px;
+	letter-spacing: 1px;
+
+	&:hover {
+		background-color: $primary-color;
+		cursor: pointer;
+	}
+}
+
+.page__wrapper {
+	background: $overlar-color;
+	min-width: 290px;
+	margin: 0 auto;
+	max-width: 640px;
+	padding: 20px;
+}
+
+.form {}
+
+.form__input {
+	margin-bottom: 20px;
+}
+
+.form__info {
+	font-size: 10px;
+	color: $secondary-color;
+}
+
+.input--readonly {
+	background-color: rgba(255, 255, 255, 0.1) !important;
+	cursor: not-allowed;
+}
+
+.input--center-content {
+	text-align: center;
+}
+
+.form__error {
+	border: solid 1px $error;
+	box-sizing: border-box;
+	color: $error;
+	display: inline-block;
+	padding: 10px;
+	text-align: center;
+	width: 100%;
+}
+
+.form--succes {
+	border-color: $sucess;
+	color: $sucess;
+}
+
+#output-image {
+	border: 1px solid $primary-color;
+	color: $primary-color;
+	padding: 20px;
+	text-align: center;
+	margin-top: 20px;
+
+	img {
+		max-width: 120px;
+	}
+}
