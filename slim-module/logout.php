@@ -1,4 +1,4 @@
-<?php 
+<?php
 	header('Access-Control-Allow-Origin: *');
 	header('Content-type: application/javascript');
 
@@ -8,8 +8,8 @@
 	$user_pin = $_POST['pin'];
 	$user_site = $_POST['site'];
 
-	$responseUser = loginUser($user_pin, $user_site, $token_hardcode);
-	
-	print 'loginUser = {response:"'.$responseUser['success'].'", message:"'.$responseUser['message'].'"};';
+	$responseUser = logoutUser($user_pin, $user_site, $token_hardcode);
+
+	print 'logoutUser = {response:"'.$responseUser['success'].'", message:"'.$responseUser['message'].'"};';
 
 ?>
