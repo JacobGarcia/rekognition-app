@@ -35,7 +35,7 @@ $(function() {
     if (v_data == 1) {
       console.log($('#site').val())
       $.ajax({
-        url: 'http://localhost:8081/slim-module/register.php',
+        url: 'http://localhost:8888/slim-module/register.php',
         type: 'POST',
         data: {
           pin: $('#pin').val(),
@@ -94,7 +94,7 @@ $(function() {
 
     if (v_data == 2) {
       $.ajax({
-        url: 'http://localhost:8081/slim-module/login.php',
+        url: 'http://localhost:8888/slim-module/login.php',
         type: 'POST',
         data: {
           pin: $('#pin').val(),
@@ -152,7 +152,7 @@ $(function() {
 
     if (v_data == 2) {
       $.ajax({
-        url: 'http://localhost:8081/slim-module/logout.php',
+        url: 'http://localhost:8888/slim-module/logout.php',
         type: 'POST',
         data: {
           pin: $('#pin').val(),
