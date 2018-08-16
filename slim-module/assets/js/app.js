@@ -1,4 +1,4 @@
-connus.io // *********** Socket.io *********** //
+// *********** Socket.io *********** //
 // ********************************* //
 var socket = io('https://demo.connus.mx')
 socket.on('connect', () => {
