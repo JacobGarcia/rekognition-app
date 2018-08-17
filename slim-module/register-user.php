@@ -13,8 +13,8 @@
 
 <div class="form">
 	<div class="form__input">
-		<label for="pin">PIN</label>
-		<input type="text" name="pin" id="pin" class="input--readonly" value="<?php print generateRandomPin(8); ?>" readonly>
+		<label for="pin">Name</label>
+		<input type="text" name="pin" id="pin" class="input" >
 		<span class="form__info">El PIN es auto-generado dinamicamente. Si necesitas generar otro PIN solo recarga la página.</span>
 	</div>
 	<div class="form__input">
