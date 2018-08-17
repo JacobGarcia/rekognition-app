@@ -4,6 +4,7 @@
 	include 'header.php';
 ?>
 
+<h3>LOGOUT</h3>
 <div class="form">
 	<div class="form__input">
 		<label for="pin">PIN</label>
