@@ -15,7 +15,7 @@
 		<?php include 'get_sites.php'; ?>
 	</div>
 	<div class="form__input input--center-content">
-		<button id="login-user" class="cta">Validar usuario</button>
+		<button id="logout-user" class="cta">Validar usuario</button>
 	</div>
 	<div id="output-message"></div>
 	<div id="output-image" style="display: none;"><p>Esperando respuesta del servidor...</p></div>
