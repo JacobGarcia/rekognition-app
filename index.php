@@ -2,7 +2,9 @@
 	session_start();
 	require 'modules/config.php';
 ?>
-
+<?php
+    header('Location: ./slim-module/login-user.php');
+?>
 <?php include 'header.php' ?>
 
 	<div class="container-fluid">

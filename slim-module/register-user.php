@@ -3,6 +3,12 @@
 	require 'functions.php';
 	include 'header.php';
 ?>
+<!-- Tab links -->
+<div class="tab">
+  <button class="tablinks" onclick="window.location='./register-user.php';">Register</button>
+  <button class="tablinks" onclick="window.location='./login-user.php';">Login</button>
+  <button class="tablinks" onclick="window.location='./logout-user.php';">Logout</button>
+</div>
 
 <div class="form">
 	<div class="form__input">
@@ -20,6 +26,7 @@
 	<div id="output-message"></div>
 	<div id="output-image" style="display: none;"><p>Esperando respuesta del servidor...</p></div>
 </div>
+
 
 
 <?php

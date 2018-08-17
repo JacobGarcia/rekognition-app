@@ -3,7 +3,11 @@
 	require 'functions.php';
 	include 'header.php';
 ?>
-
+<div class="tab">
+  <button class="tablinks" onclick="window.location='./register-user.php';">Register</button>
+  <button class="tablinks" onclick="window.location='./login-user.php';">Login</button>
+  <button class="tablinks" onclick="window.location='./logout-user.php';">Logout</button>
+</div>
 <div class="form">
 	<div class="form__input">
 		<label for="pin">PIN</label>
