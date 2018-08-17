@@ -3,6 +3,8 @@
 	require 'functions.php';
 	include 'header.php';
 ?>
+
+<h3>LOGOUT</h3>
 <!-- Tab links -->
 <div class="tab">
   <button class="tablinks" onclick="window.location='./register-user.php';">Register</button>

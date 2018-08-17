@@ -10,6 +10,7 @@
   <button class="tablinks" onclick="window.location='./logout-user.php';">Logout</button>
 </div>
 
+<h3>REGISTRO</h3>
 <div class="form">
 	<div class="form__input">
 		<label for="pin">PIN</label>
