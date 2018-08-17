@@ -4,7 +4,7 @@
 	include 'header.php';
 ?>
 
-<h3>LOGOUT</h3>
+<h3 style="text-align:center; color: #858c94">LOGOUT</h3>
 <!-- Tab links -->
 <div class="tab">
   <button class="tablinks" onclick="window.location='./register-user.php';">Register</button>

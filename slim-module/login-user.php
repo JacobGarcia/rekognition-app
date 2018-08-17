@@ -3,13 +3,13 @@
 	require 'functions.php';
 	include 'header.php';
 ?>
+<h3 style="text-align:center; color: #858c94">LOGIN</h3>
 <div class="tab">
   <button class="tablinks" onclick="window.location='./register-user.php';">Register</button>
   <button class="tablinks" onclick="window.location='./login-user.php';">Login</button>
   <button class="tablinks" onclick="window.location='./logout-user.php';">Logout</button>
 </div>
 
-<h3>LOGIN</h3>
 <div class="form">
 	<div class="form__input">
 		<label for="pin">PIN</label>
